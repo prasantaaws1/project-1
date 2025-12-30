@@ -1,44 +1,9 @@
-.terraform/*
-# Ignore all .log files in any directory
+# Ignore the .terraform directory
+.terraform/
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore crash log files
 *.log
-
-# Ignore a specific file named "config.local.json" in the root directory
-/config.local.json
-
-# Ignore the entire "temp" directory in any directory
-temp/
-
-# Ignore the entire "build" directory in the root directory
-/build/
-
-# Ignore files with a specific extension
-*.tmp
-*.swp
-*.swo
-
-# Ignore OS-generated files (e.g., macOS .DS_Store or Windows thumbs.db)
-.DS_Store
-Thumbs.db
-
-# Ignore files specific to various IDEs and languages
-
-# Node.js
-node_modules/
-
-# Python
-__pycache__/
-*.pyc
-
-# Java
-*.class
-
-# Maven
-target/
-
-# Visual Studio
-.vs/
-*.suo
-*.user
-
-# Negation: Track "important.log" file, even though other .log files are ignored
-!important.log
